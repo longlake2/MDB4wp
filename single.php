@@ -27,10 +27,9 @@
 	                    </div>
 	                </div>
 	                <br>
-	                <!--Post excerpt-->
-	                <p><?php the_excerpt(); ?></p>
-	                <!--"Read more" button-->
-	                <a href="<?php echo get_permalink() ?>"><button class="btn btn-primary">Read more</button></a>
+
+	               <p><?php the_content(); ?></p>
+	               
 	            </div>
 	            <!--/.Post-->
 	            <hr>

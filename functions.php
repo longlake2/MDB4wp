@@ -25,8 +25,13 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 function MDB4wp_setup() {
   // Navigation Menus
   register_nav_menus(array(
-    'navbar' => __( 'Navbar Menu')
+    'navbar' => __( 'Navbar Menu'),
+    'footer1' => __( 'Footer #1 Column'),
+    'footer2' => __( 'Footer #2 Column'),
+    'footer3' => __( 'Footer #3 Column')
+
     ));
+
   // Add featured image support
     add_theme_support('post-thumbnails');
     add_image_size('main-full', 1078, 516, false); // main post image in full width
@@ -35,9 +40,14 @@ function MDB4wp_setup() {
                                      
 
 /**
- * Include external files
+ * Include Bootstrap walker
  */
 require_once('inc/mdb_bootstrap_navwalker.php');
+
+/**
+ * Register Widget Areas
+ */
+require get_template_directory() . '/inc/widgets.php';
 
 
 ?>
